@@ -6,8 +6,8 @@ abstract class Personagem{
     private double destreza;
     private Arma arma;
 
-    public Personagem(String nomeTipo,double saude,double forca, double destreza, Arma arma){
-        this.nomeTipo = nomeTipo;
+    public Personagem(String nome,double saude,double forca, double destreza, Arma arma){
+        this.nomeTipo = nome;
         this.saude = saude;
         this.forca = forca;
         this.destreza = destreza;

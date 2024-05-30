@@ -1,4 +1,4 @@
-class Arma{
+abstract class Arma{
 
     private String nome;
     private double modDano;

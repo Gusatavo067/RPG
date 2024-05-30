@@ -1,4 +1,4 @@
-class Personagem{
+abstract class Personagem{
 
     private String nomeTipo;
     private double saude;
@@ -26,6 +26,16 @@ class Personagem{
     }
      
     public class void atacar(Personagem b){
+        
+    }
+
+    private double calcularDano(){
+
+    }
+    private double recebeDano(){
+
+    }
+    private boolean estaMorto(){
         
     }
 }

@@ -30,6 +30,7 @@ abstract class Personagem{
     }
 
     private double calcularDano(){
+    
 
     }
     private double recebeDano(){

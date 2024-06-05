@@ -13,7 +13,7 @@ abstract class Personagem{
         this.destreza = destreza;
         this.arma = arma;
     }
-    public class void printStatus(){
+    public void printStatus(){
         if (this.estaMorto()) {
             System.out.println(nomeTipo + " [Morreu, Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
         } else {
@@ -24,17 +24,14 @@ abstract class Personagem{
 
     
      
-    public class void atacar(Personagem b){
-        
-    }
+    public void atacar(Personagem b);
 
-    private double calcularDano(){
+    private double calcularDano();
 
-    }
-    private double recebeDano(){
-
+    private double recebeDano(double pontosDano){
+        this.saude -= pontosDano;
     }
     private boolean estaMorto(){
-        
+        return saude < 1.0;
     }
 }

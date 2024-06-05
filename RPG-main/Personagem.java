@@ -14,16 +14,15 @@ abstract class Personagem{
         this.arma = arma;
     }
     public class void printStatus(){
-        if(this.saude < 1.0){
-            String status = "Morreu";
-            System.out.printf("Saude: %s, Forca: %.1f, Destreza: %.1f", status, this.forca, this.destreza);
+        if (this.estaMorto()) {
+            System.out.println(nomeTipo + " [Morreu, Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+        } else {
+            System.out.println(nomeTipo + " [Saude: " + saude + ", Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
         }
-        else{
-            System.out.printf("Saude: %.1f, Forca: %.1f, Destreza: %.1f", this.saude, this.forca, this.destreza);
-        }
-
-
     }
+
+
+    
      
     public class void atacar(Personagem b){
         

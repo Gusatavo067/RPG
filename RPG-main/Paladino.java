@@ -6,11 +6,11 @@ class Paladino extends Personagem{
         if (estaMorto()) {
             System.out.println("O " + nomeTipo + " ataca o " + b.nomeTipo + " com " + arma.getNome() + ".");
             if (this.destreza > b.destreza) {
-                double dano = calculaDano();
+                double dano = calcularDano();
                 b.recebeDano(dano);
                 System.out.println("O ataque foi efetivo com " + dano + " pontos de dano!");
             } else if (this.destreza < b.destreza) {
-                double dano = b.calculaDano();
+                double dano = b.calcularDano();
                 this.recebeDano(dano);
                 System.out.println("O ataque foi inefetivo e revidado com " + dano + " pontos de dano!");
             } else {
@@ -21,7 +21,7 @@ class Paladino extends Personagem{
         } else {
             System.out.println("O " + nomeTipo + " não consegue atacar, pois está morto.");
         }
-        private double calculaDano() {
+        private double calcularDano() {
             return this.forca * arma.getModificadorDano();
         }
     }

@@ -22,7 +22,7 @@ class Mago extends Personagem{
         } else {
             System.out.println("O " + nomeTipo + " não consegue atacar, pois está morto.");
         }
-        private double calculaDano() {
+        private double calcularDano() {
             return this.forca * arma.getModificadorDano();
         }
     }

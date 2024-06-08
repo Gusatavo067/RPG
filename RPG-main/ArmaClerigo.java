@@ -1,5 +1,7 @@
 abstract class ArmaClerigo extends Arma{
-    
+    public ArmaClerigo(String nome, double modificadorDano) {
+        super(nome, modificadorDano);
+    }
 }
 class Martelo extends ArmaClerigo{
     public Martelo(){

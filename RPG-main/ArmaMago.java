@@ -1,5 +1,7 @@
 abstract class ArmaMago extends Arma{
-
+    public ArmaMago(String nome, double modificadorDano) {
+        super(nome, modificadorDano);
+    }
 }
 
 class Transmutacao extends ArmaMago{

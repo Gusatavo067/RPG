@@ -1,16 +1,16 @@
 class Clerigo extends Personagem{
-    public Clerigo(){
+    public Clerigo(double saude, double forca, double destreza, Arma arma){
         super("Clerigo", saude, forca, destreza, arma);
     }
     public void atacar(Personagem b){
-        if (estaMorto()) {
-            System.out.println("O " + nomeTipo + " ataca o " + b.nomeTipo + " com " + arma.getNome() + ".");
+        if (!estaMorto()) {
+            System.out.println("O " + super.nomeTipo + " ataca o " + b.nomeTipo + " com " + this.arma.getNome() + ".");
             if (this.destreza > b.destreza) {
-                double dano = calculaDano();
+                double dano = calcularDano();
                 b.recebeDano(dano);
                 System.out.println("O ataque foi efetivo com " + dano + " pontos de dano!");
             } else if (this.destreza < b.destreza) {
-                double dano = b.calculaDano();
+                double dano = b.calcularDano();
                 this.recebeDano(dano);
                 System.out.println("O ataque foi inefetivo e revidado com " + dano + " pontos de dano!");
             } else {
@@ -19,10 +19,10 @@ class Clerigo extends Personagem{
             printStatus();
             b.printStatus();
         } else {
-            System.out.println("O " + nomeTipo + " não consegue atacar, pois está morto.");
+            System.out.println("O " + super.nomeTipo + " não consegue atacar, pois está morto.");
         }
-        private double calcularDano() {
-            return this.forca * arma.getModificadorDano();
-        }
+    }
+    protected double calcularDano() {
+        return this.forca * arma.getModificadorDano();
     }
 }

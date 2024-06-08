@@ -1,5 +1,7 @@
 abstract class ArmaPaladino extends Arma{
-    
+    public ArmaPaladino(String nome, double modificadorDano) {
+        super(nome, modificadorDano);
+    }
 }
 class Espada extends ArmaPaladino{
     public Espada(){

@@ -1,10 +1,10 @@
 abstract class Personagem{
 
-    private String nomeTipo;
-    private double saude;
-    private double forca;
-    private double destreza;
-    private Arma arma;
+    protected String nomeTipo;
+    protected double saude;
+    protected double forca;
+    protected double destreza;
+    protected Arma arma;
 
     public Personagem(String nome,double saude,double forca, double destreza, Arma arma){
         this.nomeTipo = nome;
@@ -15,23 +15,23 @@ abstract class Personagem{
     }
     public void printStatus(){
         if (this.estaMorto()) {
-            System.out.println(nomeTipo + " [Morreu, Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+            System.out.println(this.nomeTipo + " [Morreu, Forca: " + this.forca + ", Destreza: " + this.destreza + ", " + this.arma.getNome() + "]");
         } else {
-            System.out.println(nomeTipo + " [Saude: " + saude + ", Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+            System.out.println(this.nomeTipo + " [Saude: " + this.saude + ", Forca: " + this.forca + ", Destreza: " + this.destreza + ", " + this.arma.getNome() + "]");
         }
     }
 
 
     
      
-    public void atacar(Personagem b);
+    abstract void atacar(Personagem b);
 
-    private double calcularDano();
+    abstract double calcularDano();
 
-    private double recebeDano(double pontosDano){
+    protected void recebeDano(double pontosDano){
         this.saude -= pontosDano;
     }
-    private boolean estaMorto(){
+    protected boolean estaMorto(){
         return saude < 1.0;
     }
 }

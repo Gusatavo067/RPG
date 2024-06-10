@@ -9,7 +9,7 @@ class Transmutacao extends ArmaMago{
         super("Transmutacao", 0.25);
     }
 }
-class Psikappa extends Arma{
+class Psikappa extends ArmaMago{
     public Psikappa(){
         super("Psikappa", 0.5);
     }

@@ -32,6 +32,6 @@ abstract class Personagem{
         this.saude -= pontosDano;
     }
     protected boolean estaMorto(){
-        return saude < 1.0;
+        return this.saude < 1.0;
     }
 }

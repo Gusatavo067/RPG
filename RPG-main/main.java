@@ -41,26 +41,26 @@ class Main{
     
     // Método para criar um personagem com base na entrada do usuário
     private static Personagem criarPersonagem(Scanner scanner) {
-        String tipo = scanner.next();
+        int tipo = scanner.nextInt();
         double saude = scanner.nextDouble();
         double forca = scanner.nextDouble();
         double destreza = scanner.nextDouble();
         int arma = scanner.nextInt();
         
         switch (tipo) {
-            case "Mago":
+            case 1:
                 if (arma == 1) {
                     return new Mago(saude, forca, destreza, new Transmutacao());
                 } else {
                     return new Mago(saude, forca, destreza, new Psikappa());
                 }
-            case "Paladino":
+            case 2:
                 if (arma == 1) {
                     return new Paladino(saude, forca, destreza, new Espada());
                 } else {
                     return new Paladino(saude, forca, destreza, new Lanca());
                 }
-            case "Clérigo":
+            case 3:
                 if (arma == 1) {
                     return new Clerigo(saude, forca, destreza, new Martelo());
                 } else {
